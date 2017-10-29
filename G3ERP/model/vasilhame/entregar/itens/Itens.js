@@ -1,0 +1,31 @@
+Ext.define("App.model.vasilhame.entregar.itens.Itens",{
+    extend: "Ext.data.Model",
+    idProperty: "idEmpresa" + "idFilial" + "id",
+    fields: [
+        {name: "idEmpresa", type: "int", label: "Empresa"},
+        {name: "empresa.nome", mapping: "empresa.nome", type: "string", label: "Nome Empresa"},
+        {name: "idFilial", type: "int", label: "Filial"},
+        {name: "filial.descricao", mapping: "filial.descricao", type: "string", label: "Descrição da Filial"},
+        {name: "idCodigo", type: "int", label: "ID"},
+        {name: "idVasilhameEntregar", type: "int", label: "ID Vasilhame"},
+        {name: "vasilhameEntregar.idPessoa", mapping: "vasilhameEntregar.idPessoa", type: "int", label: "Pessoa"},
+        {name: "vasilhameEntregar.pessoa.digito", mapping: "vasilhameEntregar.pessoa.digito", type: "string", label: "Dígito Pessoa"},
+        {name: "vasilhameEntregar.nome", mapping: "vasilhameEntregar.nome", type: "string", label: "Nome Pessoa"},
+        {name: "vasilhameEntregar.tipoContribuinte", mapping: "vasilhameEntregar.tipoContribuinte", type: "int", allowNull: true, label: "Contribuinte Vasilhame Entregar"},
+        {name: "vasilhameEntregar.cpfcnpj", mapping: "vasilhameEntregar.cpfcnpj", type: "string", label: "CPF/CNPJ Vasilhame Entregar"},
+        {name: "vasilhameEntregar.situacao", mapping: "vasilhameEntregar.situacao", type: "int", allowNull: true, label: "Situação Vasilhame Entregar"},
+        {name: "vasilhameEntregar.idUsuario", mapping: "vasilhameEntregar.idUsuario", type: "string", label: "Usuário Vasilhame Entregar"},
+        {name: "vasilhameEntregar.usuario.nome", mapping: "vasilhameEntregar.usuario.nome", type: "string", label: "Nome Usuário Vasilhame Entregar"},
+        {name: "idProduto", type: "int", label: "Produto"},
+        {name: "produto.digito", mapping: "produto.digito", type: "string", label: "Dígito do Produto"},
+        {name: "produto.descricao", mapping: "produto.descricao", type: "string", label: "Descrição do Produto"},
+        {name: "quantidade", type: "float", label: "Quantidade"},
+        {name: "quantidadeBaixada", type: "float", label: "Quantidade Baixada"},
+        {name: "quantidadeBaixar", type: "float", label: "Quantidade a Baixar"},        
+        {name: "tipoGarrafeira", type: "int", allowNull: true, label: "Garrafeira"},
+        {name: "situacao", type: "int", allowNull: true, label: "Situação Item"},
+        {name: "dataHoraGravacao", type: "date", dateFormat: "Y-m-d H:i:s", label: "Data/Hora Gravação"},
+        {name: "idUsuario", type: "string", label: "Usuário"},
+        {name: "usuario.nome", mapping: "usuario.nome", type: "string", label: "Nome Usuário"}
+    ]
+});

@@ -1,0 +1,33 @@
+Ext.define("App.model.vasilhame.entregar.itens.baixas.Baixas",{
+    extend: "Ext.data.Model",
+    idProperty: "idEmpresa" + "idFilial" + "id",
+    fields: [
+        {name: "idEmpresa", type: "int", label: "Empresa"},
+        {name: "empresa.nome", mapping: "empresa.nome", type: "string", label: "Nome Empresa"},
+        {name: "idFilial", type: "int", label: "Filial"},
+        {name: "filial.descricao", mapping: "filial.descricao", type: "string", label: "Descrição da Filial"},
+        {name: "idCodigo", type: "int", label: "ID"},
+        {name: "vasilhameEntregarItem.idVasilhameEntregar", mapping: "vasilhameEntregarItem.idVasilhameEntregar", type: "int", label: "Vasilhame Entregar"},
+        {name: "vasilhameEntregarItem.vasilhameEntregar.idPessoa", mapping: "vasilhameEntregarItem.vasilhameEntregar.idPessoa", type: "int", label: "Pessoa"},
+        {name: "vasilhameEntregarItem.vasilhameEntregar.pessoa.digito", mapping: "vasilhameEntregarItem.vasilhameEntregar.pessoa.digito", type: "string", label: "Dígito Pessoa"},
+        {name: "vasilhameEntregarItem.vasilhameEntregar.nome", mapping: "vasilhameEntregarItem.vasilhameEntregar.nome", type: "string", label: "Nome Pessoa"},
+        {name: "vasilhameEntregarItem.vasilhameEntregar.tipoContribuinte", mapping: "vasilhameEntregarItem.vasilhameEntregar.tipoContribuinte", type: "int", allowNull: true, label: "Contribuinte Vasilhame Entregar"},
+        {name: "vasilhameEntregarItem.vasilhameEntregar.cpfcnpj", mapping: "vasilhameEntregarItem.vasilhameEntregar.cpfcnpj", type: "string", label: "CPF/CNPJ Vasilhame Entregar"},
+        {name: "vasilhameEntregarItem.vasilhameEntregar.situacao", mapping: "vasilhameEntregarItem.vasilhameEntregar.situacao", type: "int", allowNull: true, label: "Situação Vasilhame Entregar"},
+        {name: "vasilhameEntregarItem.vasilhameEntregar.idUsuario", mapping: "vasilhameEntregarItem.vasilhameEntregar.idUsuario", type: "string", label: "Usuário Vasilhame Entregar"},
+        {name: "vasilhameEntregarItem.vasilhameEntregar.usuario.nome", mapping: "vasilhameEntregarItem.vasilhameEntregar.usuario.nome", type: "string", label: "Nome Usuário Vasilhame Entregar"},
+        {name: "idVasilhameEntregarItem", type: "int", label: "ID Vasilhame Item"},
+        {name: "vasilhameEntregarItem.idProduto", mapping: "vasilhameEntregarItem.idProduto", type: "int", label: "Produto"},
+        {name: "vasilhameEntregarItem.produto.digito", mapping: "vasilhameEntregarItem.produto.digito", type: "string", label: "Dígito do Produto"},
+        {name: "vasilhameEntregarItem.produto.descricao", mapping: "vasilhameEntregarItem.produto.descricao", type: "string", label: "Descrição do Produto"},
+        {name: "vasilhameEntregarItem.tipoGarrafeira", mapping: "vasilhameEntregarItem.tipoGarrafeira", type: "int", allowNull: true, label: "Garrafeira"},
+        {name: "vasilhameEntregarItem.situacao", mapping: "vasilhameEntregarItem.situacao", type: "int", allowNull: true, label: "Situação Item"},
+        {name: "tipoBaixa", type: "int", allowNull: true, label: "Tipo Baixa"},
+        {name: "vasilhameEntregarItem.quantidade", mapping: "vasilhameEntregarItem.quantidade", type: "float", label: "Quantidade a Entregar"},
+        {name: "quantidadeBaixada", type: "float", label: "Quantidade Baixada"},        
+        {name: "quantidade", type: "float", label: "Quantidade"},
+        {name: "dataHoraGravacao", type: "date", dateFormat: "Y-m-d H:i:s", label: "Data/Hora Gravação"},
+        {name: "idUsuario", type: "string", label: "Usuário"},
+        {name: "usuario.nome", mapping: "usuario.nome", type: "string", label: "Nome Usuário"}
+    ]
+});
